@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Torres de Hanói</title>
+  <link rel="stylesheet" href="estilo.css">
+  <script type="module" src="script.js"></script>
+</head>
+
+<body>
+  <div class="game">
+    <header>
+      <h1>Torres de Hanói <small>Lleva todos los discos a la torre C</small></h1>
+      <div class="stats">
+        <div class="stat"><small>Movimientos</small><strong id="moves">0</strong></div>
+        <div class="stat"><small>Mínimo</small><strong id="minimum">31</strong></div>
+      </div>
+    </header>
+
+    <div class="toolbar">
+      <span class="label">Discos</span>
+      <div class="segmented" id="disk-count"></div>
+      <button class="button" id="reset">↺ Reiniciar</button>
+      <button class="button primary" id="solve">▶ Resolver</button>
+      <button class="button" id="pause" disabled>⏸ Pausar</button>
+      <label class="speed">🐢 <input type="range" id="speed" min="1" max="10" value="5" aria-label="Velocidad"> 🐇</label>
+    </div>
+
+    <div class="board" id="board">
+      <div class="base"></div>
+    </div>
+
+    <p class="message" id="message" aria-live="polite">Haz clic en una torre y luego en otra, o arrastra el disco de arriba</p>
+  </div>
+
+  <p>Desarrollado por: Josue y Jhesenia</p>
+</body>
+
+</html>
